@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/fe-sprint-my-agora-states-in-react/static/css/main.edcc925a.css",
-    "main.js": "/fe-sprint-my-agora-states-in-react/static/js/main.2b1e7271.js",
+    "main.js": "/fe-sprint-my-agora-states-in-react/static/js/main.bfd4db56.js",
     "static/js/787.3ee414d3.chunk.js": "/fe-sprint-my-agora-states-in-react/static/js/787.3ee414d3.chunk.js",
     "index.html": "/fe-sprint-my-agora-states-in-react/index.html",
     "main.edcc925a.css.map": "/fe-sprint-my-agora-states-in-react/static/css/main.edcc925a.css.map",
-    "main.2b1e7271.js.map": "/fe-sprint-my-agora-states-in-react/static/js/main.2b1e7271.js.map",
+    "main.bfd4db56.js.map": "/fe-sprint-my-agora-states-in-react/static/js/main.bfd4db56.js.map",
     "787.3ee414d3.chunk.js.map": "/fe-sprint-my-agora-states-in-react/static/js/787.3ee414d3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.edcc925a.css",
-    "static/js/main.2b1e7271.js"
+    "static/js/main.bfd4db56.js"
   ]
 }
