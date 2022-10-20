@@ -10,8 +10,9 @@ const Discussions = ({ notice, normal }) => {
 
   useEffect(() => {
     // 첫 화면 로딩
-    if (!load) {
+    if (load < 2) {
       window.scrollTo({ top: 0, behavior: "smooth" });
+      setLoad(load + 1);
     }
     // 이외의 경우
     else {
@@ -21,29 +22,25 @@ const Discussions = ({ notice, normal }) => {
         window.scrollTo({ top: 520, behavior: "smooth" });
       }
     }
-  }, [load, notice, normal]);
+  }, [notice, normal, limit, page]);
 
   const handleChangeLimit = (event) => {
     const newLimit = Number(event.target.value);
     setLimit(newLimit);
     setPage(1);
-    setLoad(load + 1);
   };
 
   const handleCurrentPage = (event) => {
     const newPage = Number(event.target.textContent);
     setPage(newPage);
-    setLoad(load + 1);
   };
 
   const handlePrevNextPage = (event) => {
     if (event.target.textContent === " Previous") {
       setPage(page - 1);
-      setLoad(load + 1);
     }
     if (event.target.textContent === "Next ") {
       setPage(page + 1);
-      setLoad(load + 1);
     }
   };
 

@@ -26,7 +26,7 @@ const App = () => {
     event.preventDefault();
 
     const newDiscussion = {
-      id: data.length + 1,
+      id: data[0].id + 1, // 임시 id. 그래도 unique한 key여야 error가 안 남.
       createdAt: new Date().toISOString(),
       title: event.target[1].value,
       url: "",
