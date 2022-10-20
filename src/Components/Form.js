@@ -1,35 +1,7 @@
 import React, { useEffect } from "react";
 import "../style.css";
 
-function Form() {
-
-  /* 새로운 질문 접수 */
-  //   const handleButtonClick = (event) => {
-  //     const newDiscussion = {
-  //       id: data.length + 1,
-  //       createdAt: new Date().toISOString(),
-  //       title: event.target[1].value,
-  //       url: "",
-  //       author: event.target[0].value,
-  //       text: event.target[2].value,
-  //       answer: null,
-  //       avatarUrl: `https://picsum.photos/seed/${event.target[0].value}/200/200`,
-  //       notice: event.target[3].checked,
-  //     };
-
-  //     // submit form 내용 초기화하기
-  //     event.target[0].value = "";
-  //     event.target[1].value = "";
-  //     event.target[2].value = "";
-  //     event.target[3].checked = false;
-
-  //     data.unshift(newDiscussion); // 후에 POST로 바꿀 것
-  //     if (newDiscussion.notice) {
-  //       setNoti([newDiscussion, ...notice]);
-  //     } else {
-  //       setNormal([newDiscussion, ...normal]);
-  //     }
-  //   };
+function Form({ onClick }) { 
 
   const handleHeight = () => {
     const textarea = document.querySelector("textarea");
@@ -53,7 +25,7 @@ function Form() {
 
   return (
     <section className="form__container">
-      <form action="" method="get" className="form">
+      <form action="" method="get" className="form" onSubmit={onClick}>
         <div className="form__input--wrapper">
           <div>Start a new discussion</div>
           <div className="form__input--name">
