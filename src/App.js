@@ -48,6 +48,15 @@ const App = () => {
       : setNormal([newDiscussion, ...normal]);
 
     // TODO: POST로 요청보내기
+    fetch("http://localhost:4000/discussions", {
+      method: "post",
+      body: JSON.stringify(newDiscussion),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((res) => res.json());
+    // 일단 새로고침 하면 저장된 데이터가 날라오는거 보면 POST가 동작하지만
+    // 서버가 재시작하면 저장했던 내용은 사라짐
   };
 
   const handleLandscape = () => {
@@ -71,7 +80,12 @@ const App = () => {
   return (
     <div className="App">
       <h1>My Agora States</h1>
-      <main style={{ flexDirection: window.innerWidth > 1000 ? "row" : "column" }}>
+      <main
+        style={{
+          flexDirection: window.innerWidth > 1000 ? "row" : "column",
+          alignItems: window.innerWidth > 1000 ? "flex-start" : "column",
+        }}
+      >
         <Form onClick={handleData} />
         {data && <Discussions notice={notice} normal={normal} />}
       </main>
