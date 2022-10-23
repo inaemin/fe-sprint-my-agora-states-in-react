@@ -25,7 +25,7 @@ https://github.com/inaemin/fe-sprint-my-agora-states-server
 - 반응형 웹사이트. 가로가 1000px 이상인 경우, 질문폼과 게시글이 가로로 정렬되고 Textarea 높이도 변경.
 - Textarea부분에 줄바뀜이 일어나면 자동으로 높이 변경.
 - 답변이 있는 경우 아코디언식 구성. 마우스 호버시 배경색 변경, 클릭시 보더라인 강조.
-- 폼에 내용을 입력하고 제출하면 목록에 즉시 반영. 하지만 POST요청은 보내지 않아 새로고침하면 사라짐.  
+- 폼에 내용을 입력하고 제출하면 목록에 즉시 반영 및 서버로 POST 요청.  
 
 #
 #
@@ -53,6 +53,5 @@ https://github.com/inaemin/fe-sprint-my-agora-states-server
 - Responsive website. If width is more than 1000px, change to landscape mode.
 - Textbox height automatically changes, if line-break happens.
 - If already answered, answer part is collapsible. Turns green when mouse hovers, outline changes when mouse clicks.
-- After submitting the form, re-render the list instantly. Not sending POST request to server yet, so it disappears when refreshed.  
-
+- After submitting the form, re-renders the list instantly and sends POST request to server.  
 
