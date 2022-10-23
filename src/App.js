@@ -43,11 +43,10 @@ const App = () => {
     event.target[2].value = "";
     event.target[3].checked = false;
 
-    if (newDiscussion.notice) {
-      setNotice([newDiscussion, ...notice]);
-    } else {
-      setNormal([newDiscussion, ...normal]);
-    }
+    newDiscussion.notice
+      ? setNotice([newDiscussion, ...notice])
+      : setNormal([newDiscussion, ...normal]);
+
     // TODO: POST로 요청보내기
   };
 
@@ -55,8 +54,10 @@ const App = () => {
     const main = document.querySelector("main");
     if (window.innerWidth > 1000) {
       main.style.flexDirection = "row";
+      main.style.alignItems = "flex-start";
     } else {
       main.style.flexDirection = "column";
+      main.style.alignItems = "center";
     }
   };
 

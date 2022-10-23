@@ -17,6 +17,7 @@ function Pagination({ limit, data, active_page, onNumBtn, onPrevNextBtn }) {
         {[...Array(pageCount)].map((e, i) => (
           <button
             className={i + 1 === active_page ? "pagination-number active" : "pagination-number"}
+            key={`Page ${i + 1}`}
             page-index={i + 1}
             label={`Page ${i + 1}`}
             onClick={onNumBtn}

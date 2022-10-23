@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import "../style.css";
 
-function Form({ onClick }) { 
-
+function Form({ onClick }) {
   const handleHeight = () => {
     const textarea = document.querySelector("textarea");
     if (window.innerWidth > 1000) {
@@ -10,7 +9,7 @@ function Form({ onClick }) {
       textarea.style.height = "1px";
       textarea.style.height = `${15 + textarea.scrollHeight}px`;
     } else {
-      textarea.style["min-height"] = "auto";
+      textarea.style["min-height"] = "100px";
       textarea.style.height = "1px";
       textarea.style.height = `${15 + textarea.scrollHeight}px`;
     }
@@ -40,7 +39,7 @@ function Form({ onClick }) {
               name="story"
               placeholder="질문을 작성하세요"
               required
-              style={{ minHeight: window.innerWidth > 1000 ? "500px" : "auto" }}
+              style={{ minHeight: window.innerWidth > 1000 ? "500px" : "100px" }}
               onKeyDown={handleHeight}
               onKeyUp={handleHeight}
             ></textarea>

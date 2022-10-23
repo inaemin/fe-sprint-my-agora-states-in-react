@@ -11,7 +11,7 @@ const Discussions = ({ notice, normal }) => {
   useEffect(() => {
     // 첫 화면 로딩
     if (load < 2) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      // window.scrollTo({ top: 0, behavior: "smooth" });
       setLoad(load + 1);
     }
     // 이외의 경우
@@ -19,7 +19,7 @@ const Discussions = ({ notice, normal }) => {
       if (window.innerWidth > 1000) {
         window.scrollTo({ top: 150, behavior: "smooth" });
       } else {
-        window.scrollTo({ top: 520, behavior: "smooth" });
+        window.scrollTo({ top: 580, behavior: "smooth" });
       }
     }
   }, [notice, normal, limit, page]);
